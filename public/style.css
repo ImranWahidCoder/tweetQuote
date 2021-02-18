@@ -75,6 +75,10 @@ body
     {
         background: url('tree.webp');
     }
+    10%
+    {
+        background: url('tropical.webp');
+    }
     16.66%
     {
         background: url('dark.webp');
@@ -87,6 +91,10 @@ body
     {
         background: url('boat.webp');
     }
+    60%
+    {
+        background: url('sea.webp');
+    }
     66.64%
     {
         background: url('avenue.jpg');
@@ -94,6 +102,10 @@ body
     83.3%
     {
         background: url('cherry.jpg');
+    }
+    90%
+    {
+        background: url('beach.jpg');
     }
     100%
     {

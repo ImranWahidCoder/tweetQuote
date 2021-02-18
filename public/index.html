@@ -75,15 +75,15 @@
         let tweetMe = document.getElementById('tweetMe');
         const tweetNow = () => {
             let post = `https://twitter.com/intent/tweet?text=${quotes.innerText}   Author:-${author.innerText}`;
-            window.open(post);
+            location.href=post;
         }
         tweetMe.addEventListener("click", tweetNow);
-        const getQuotes = async () => {
+        const getQuotes = async () => { 
             const api = `https://type.fit/api/quotes`;
             try {
                 let data = await fetch(api);
                 let realData = await data.json();
-                let ind = Math.floor(Math.random() * 100);
+                let ind = Math.floor(Math.random() * 1000);
                 quotes.innerText = `“ ${realData[ind].text} ”`;
                 let auth = realData[ind].author;
                 if (auth == null) {
