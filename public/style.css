@@ -25,12 +25,14 @@ body
     padding-left: 15px;
     padding-right: 15px;
     outline: none;
+    text-shadow: 5px 5px 8px black;
 }
 #quotes
 {
     font-size: 60px;
     color: whitesmoke;
     font-weight: bold;
+    text-shadow: 5px 5px 8px black;
     /* font-family: 'Hammersmith One', sans-serif;
     font-family: 'Neuton', serif; */
 }
@@ -39,6 +41,7 @@ body
     font-size: 30px;
     color: whitesmoke;
     margin-bottom: 30px;
+    text-shadow: 5px 5px 8px black;
 }
 #newQ
 {
@@ -50,13 +53,14 @@ body
     padding-left: 15px;
     padding-right: 15px;
     font-weight: 400;
-    text-shadow: grey 5px solid;
+    text-shadow: 5px 5px 8px black;
     outline: none;
 }
 #newQ:hover
 {
     background-color:#282828;
     color: blanchedalmond;
+    text-shadow: 5px 5px 8px black;
 }
 .emnei
 {
