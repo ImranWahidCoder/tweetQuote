@@ -14,13 +14,14 @@ body
     margin-top: 50px;
     width: 95%;
     height: 70%;
+    box-shadow: 10px 10px 10px #888888;
 }
 #tweetMe
 {
     background-color: rgb(11, 129, 184);
     color:white;
     border-radius: 25px;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 15px;
     padding-right: 15px;
     outline: none;
@@ -30,6 +31,8 @@ body
     font-size: 60px;
     color: whitesmoke;
     font-weight: bold;
+    /* font-family: 'Hammersmith One', sans-serif;
+    font-family: 'Neuton', serif; */
 }
 #author
 {
@@ -41,7 +44,7 @@ body
 {
     background-color: rgb(5, 173, 5);
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 30px;
     margin: 10px;
     padding-left: 15px;
@@ -149,4 +152,8 @@ last
 .baba
 {
     width: 600px;
+}
+.extra_style
+{
+    font-family: 'Pacifico', cursive;
 }
