@@ -22,8 +22,7 @@ body
     color:white;
     border-radius: 25px;
     font-size: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 20px 5px 20px;
     outline: none;
     text-shadow: 5px 5px 8px black;
 }
@@ -48,10 +47,9 @@ body
     background-color: rgb(5, 173, 5);
     color: whitesmoke;
     font-size: 25px;
-    border-radius: 30px;
+    border-radius: 25px;
     margin: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 20px 5px 20px;
     font-weight: 400;
     text-shadow: 5px 5px 8px black;
     outline: none;
