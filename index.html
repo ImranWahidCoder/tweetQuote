@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet with Imu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Neuton:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="./Images/imu.jpg">
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="card text-center emnei" animation-name: anime;">
+            <div class="card-header" style="color: blanchedalmond; size: 20px;">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title extra_style" style="font-size: 30px; color: azure;"><u> Quotes that inspires
+                        you</u></h5>
+                <div id="quotes"></div>
+                <div id="author"></div>
+                <button id="newQ"><i class="fas fa-quote-left"></i> New Quotes</button>
+                <button id="tweetMe"> <i class="fab fa-twitter" style="color: rgb(236, 237, 245);"></i> Tweet</button>
+            </div>
+            <div class="card-footer text-muted">
+            </div>
+        </div>
+    </div>
+
+    <footer class="container py-5 opor">
+        <div class="row side_f">
+            <div class="col-12 col-md baba">
+                <small class="d-block mb-3 text-muted ektu">Made with ❤ by © Imran Wahid</small>
+            </div>
+            <div class="col-6 col-md side_s">
+                <h5 style="color: blanchedalmond; font-weight: bold;">Wanna contact me?</h5>
+                <ul class="list-unstyled text-small">
+                    <li class="onek"><a class="tai" href="https://www.instagram.com/seems_like_imu/"><img
+                                src="./Images/instaicon.png" height="25px" width="25px"> | Follow me on Instagram</a></li>
+                    <li class="onek"><a class="tai" href="https://www.facebook.com/imran2018wahid"><img src="./Images/fb.png"
+                                height="25px" width="25px"> | Follow me on Facebook</a></li>
+                    <li class="onek"><a class="tai" href="https://www.linkedin.com/in/imu2018/"><img src="./Images/link.png"
+                                height="25px" width="25px"> | Follow me on LinkedIn</a></li>
+                    <li class="onek"><a class="tai" href="https://twitter.com/ImranWa15028888"><img src="./Images/twitter.webp"
+                                height="25px" width="25px"> | Follow me on Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        let insta = document.getElementById("insta_");
+        let fb_ = document.getElementById("fb_");
+        let link_ = document.getElementById("link_");
+        let quotes = document.getElementById('quotes');
+        let author = document.getElementById('author');
+        let newQ = document.getElementById('newQ');
+        let tweetMe = document.getElementById('tweetMe');
+        const tweetNow = () => {
+            let post = `https://twitter.com/intent/tweet?text=${quotes.innerText}   Author:-${author.innerText}`;
+            location.href=post;
+        }
+        tweetMe.addEventListener("click", tweetNow);
+        const getQuotes = async () => { 
+            const api = `https://type.fit/api/quotes`;
+            try {
+                let data = await fetch(api);
+                let realData = await data.json();
+                let ind = Math.floor(Math.random() * 1000);
+                quotes.innerText = `“ ${realData[ind].text} ”`;
+                let auth = realData[ind].author;
+                if (auth == null) {
+                    author.innerText = `-Unknown`;
+                }
+                else {
+                    author.innerText = `-${auth}`;
+                }
+            }
+            catch (error) {
+
+            }
+        }
+        newQ.addEventListener("click", getQuotes);
+        getQuotes();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
